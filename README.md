@@ -22,3 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## Running with Docker
+
+```
+docker build -t rottenpotatoes .
+docker run -it --rm -p 3000:3000 -v "$PWD":/app rottenpotatoes
+rails server -b 0.0.0.0   # inside the container
+```
+
+Then open http://localhost:3000.
